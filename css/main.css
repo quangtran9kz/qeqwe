@@ -288,6 +288,10 @@ text-align: center;
 .section-content>a:hover {
     color: red;
 }
+/* ZOOM HÌNH KHI HOVER VÀO */
+.section-content img:hover{
+
+}
 /* Danhgia */
 .danhgia{
     overflow: hidden;
@@ -295,28 +299,113 @@ text-align: center;
 
 /* Footer */
 .footer{
+    height: 180px;
+    width: 100%;
+    background-color:#D3D3D3;
+}
+.heart{
+    margin-top:80px;
+    background-color:#D3D3D3;
+    width:180px;
+    height:100px;
+    position:absolute;
+    transform-origin: right bottom;
+    transition:1s;
+}
+.heart:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#D3D3D3;
+    transition:2s;
+    transform-origin: right bottom;
+    margin-bottom: 0;
+}
+.heart:hover{
+    transform:rotate(45deg);
+    background-color: red;
+    border-top-left-radius:50px;
+    border-bottom-left-radius:50px;
+}
+.heart:hover:before{
+    border-top-left-radius:50px;
+    border-bottom-left-radius:50px;
+    transform: rotate(450deg)translateY(100px);
+    background-color: red;
+}
+
+/* Loader */
+#loading{
+	background-color:tan;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	margin-top: 0px;
+	top: 0px;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100px;
+	width: 40px;
+	margin-top: -50px;
+	margin-left: -20px;
+}
+.object{
+	width: 40px;
+	height: 8px;
+	margin-bottom:20px;
+	background-color: #FFF;
+	-webkit-animation: animate 0.8s infinite;
+	animation: animate 0.8s infinite;
+	}
+#object_two { 
+	-webkit-animation-delay: 0.2s; 
+    animation-delay: 0.2s;
+
+	}
+#object_three {	
+	-webkit-animation-delay: 0.4s; 
+    animation-delay: 0.4s; 
+	}
+@-webkit-keyframes animate {
+ 
+  50% {
+	-ms-transform: scale(1.5); 
+   	-webkit-transform: scale(1.5);   
+    transform: scale(1.5);  
+	  }
+}
+
+@keyframes animate {
+  50% {
+	-ms-transform: scale(1.5); 
+   	-webkit-transform: scale(1.5);   
+    transform: scale(1.5);  
+	  }
 }
 
 
 
 
 
-
-
-
-
-
-
-/* .tooltip{
+.tooltip{
     display: inline-block;
     position: relative;
     margin:auto;
 }
 .tooltip .tooltiptext
 {
-    visibility: hidden;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     padding:20px;
     color:black;
     background-color:darkgrey;
@@ -326,19 +415,15 @@ text-align: center;
     right:10%;
 }
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+   display: block;
 }
 .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 85%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #555 transparent;
+
+    content:" ";
+	position:absolute;
+	border-style:solid;
+	border-color:transparent transparent #F9C transparent;
+	bottom:100%;
+	right:40%;
+	border-width:8px;
 }
-li#home:hover{
-background-color: blue;
-} */
